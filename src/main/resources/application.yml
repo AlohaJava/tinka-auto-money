@@ -1,0 +1,56 @@
+telegram:
+  token: ${TELEGRAM_TOKEN:123}
+  chat-id: ${TELEGRAM_CHAT_ID:123}
+  enabled: true
+account:
+  token: ${TINKA_TOKEN:123}
+  cronSettings:
+    -
+      figi: "TCS00A1039N1"
+      buyCount: 10-10
+      repeatCount: 5-7
+      cron: "0 0 10 * * MON-FRI"
+      delayBetween: 500-5000
+      delayBefore: 100-60000
+    - figi: "TCS00A1039N1"
+      buyCount: 10-12
+      repeatCount: 5-7
+      cron: "0 0 11 * * MON-FRI"
+      delayBetween: 500-5000
+      delayBefore: 100-60000
+    - figi: "TCS00A1039N1"
+      buyCount: 10-10
+      repeatCount: 5-7
+      cron: "0 0 12 * * MON-FRI"
+      delayBetween: 500-5000
+      delayBefore: 100-60000
+    - figi: "TCS00A1039N1"
+      buyCount: 20-20
+      repeatCount: 5-7
+      cron: "0 0 13 * * MON-FRI"
+      delayBetween: 500-5000
+      delayBefore: 100-60000
+    - figi: "TCS00A1039N1"
+      buyCount: 10-15
+      repeatCount: 5-7
+      cron: "0 0 14 * * MON-FRI"
+      delayBetween: 500-5000
+      delayBefore: 100-60000
+    - figi: "TCS00A1039N1"
+      buyCount: 10-15
+      repeatCount: 5-7
+      cron: "0 0 15 * * MON-FRI"
+      delayBetween: 500-5000
+      delayBefore: 100-60000
+    - figi: "TCS00A1039N1"
+      buyCount: 10-15
+      repeatCount: 5-7
+      cron: "0 0 16 * * MON-FRI"
+      delayBetween: 500-5000
+      delayBefore: 100-60000
+    - figi: "RTKMP"
+      buyCount: 1-1
+      repeatCount: 1-1
+      cron: "0 10 10 * * FRI"
+      delayBetween: 0-0
+      delayBefore: 0-0
