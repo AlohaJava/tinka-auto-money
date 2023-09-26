@@ -28,15 +28,15 @@ class SchedulerManager(
 
     private fun registerCrons() {
         logger.info { "Registering crons..." }
-
+        val timeZone = TimeZone.getTimeZone("Europe/Moscow")
         accountProperties.cronSettings.forEach { cronSetting ->
-            scheduleTask(cronSetting)
+            scheduleTask(cronSetting, timeZone)
             logger.info { "Registered cron: ${cronSetting.cron}" }
         }
     }
 
-    private fun scheduleTask(cronSetting: CronSettings) {
-        val timeZone = TimeZone.getTimeZone("Europe/Moscow")
+    private fun scheduleTask(cronSetting: CronSettings, timeZone: TimeZone) {
+
         val cronTask = Runnable {
             CoroutineScope(Dispatchers.Default).launch {
                 investService.makeProkrut(cronSetting)

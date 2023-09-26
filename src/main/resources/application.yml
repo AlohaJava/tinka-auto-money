@@ -5,8 +5,7 @@ telegram:
 account:
   token: ${TINKA_TOKEN:123}
   cronSettings:
-    -
-      figi: "TCS00A1039N1"
+    - figi: "TCS00A1039N1"
       buyCount: 10-10
       repeatCount: 5-7
       cron: "0 0 10 * * MON-FRI"

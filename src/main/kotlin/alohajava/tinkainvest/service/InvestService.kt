@@ -1,9 +1,9 @@
 package alohajava.tinkainvest.service
 
-import alohajava.tinkainvest.exception.TradeException
 import alohajava.tinkainvest.configuration.properties.CronSettings
 import alohajava.tinkainvest.configuration.properties.toRandomIntInRange
 import alohajava.tinkainvest.configuration.properties.toRandomLongInRange
+import alohajava.tinkainvest.exception.TradeException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -22,9 +22,6 @@ class InvestService(
     private val investApi: InvestApi,
     private val telegramService: TelegramService?
 ) {
-    companion object : KLogging() {
-        private val DEFAULT_QUOTATION = Quotation.newBuilder().setUnits(0).build()
-    }
 
     suspend fun makeProkrut(cronSettings: CronSettings) {
         val buyCount = cronSettings.buyCount.toRandomLongInRange()
@@ -76,4 +73,7 @@ class InvestService(
             }.await()
     }
 
+    companion object : KLogging() {
+        private val DEFAULT_QUOTATION = Quotation.newBuilder().setUnits(0).build()
+    }
 }
