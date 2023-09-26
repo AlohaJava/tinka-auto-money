@@ -1,6 +1,6 @@
 package alohajava.tinkainvest.service
 
-import alohajava.tinkainvest.configuration.exception.TradeException
+import alohajava.tinkainvest.exception.TradeException
 import alohajava.tinkainvest.configuration.properties.CronSettings
 import alohajava.tinkainvest.configuration.properties.toRandomIntInRange
 import alohajava.tinkainvest.configuration.properties.toRandomLongInRange
