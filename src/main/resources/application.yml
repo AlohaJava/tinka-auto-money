@@ -47,9 +47,9 @@ account:
       cron: "0 0 16 * * MON-FRI"
       delayBetween: 500-5000
       delayBefore: 100-60000
-    - figi: "RTKMP"
+    - figi: "BBG004S68CP5"
       buyCount: 1-1
       repeatCount: 1-1
-      cron: "0 10 10 * * FRI"
+      cron: "0 55 16 * * FRI"
       delayBetween: 0-0
       delayBefore: 0-0
